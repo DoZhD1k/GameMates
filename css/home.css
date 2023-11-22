@@ -106,7 +106,6 @@ header {
 
 .search-container input {
 	opacity: 30%;
-	/* left: 30%; */
 	left: 1.3%;
 	position: relative;
 	width: 30%;
@@ -118,12 +117,12 @@ header {
 	padding: 0 35px 0 35px; /*изменение отступа внутри интпута */
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	/* color: #fff; */
 }
 
 .search-container .icon{
 	color: #000;
 	font-size: 1.5em;
-    /* left: 60%; */
 	position: absolute; /* Позиционируем иконку абсолютно внутри родительского контейнера */
     left: 25px; /* Измените это значение в зависимости от вашего дизайна */
     pointer-events: none; /* Позволяет кликать сквозь иконку */
@@ -192,7 +191,7 @@ header {
 } */
 
 
-.no-matches-msg {
+/* .no-matches-msg {
     display: none;
     color: white;
     font-size: 24px;
@@ -204,5 +203,6 @@ header {
     transform: translate(-50%, -50%);
 }
 
-  
+   */
+
 

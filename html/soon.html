@@ -5,172 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/games.css">
-    <title>GameMates | Dota 2</title>
+    <title>GameMates | Soon</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .fullscreen-text {
+            font-size: 4em;
+            color: white;
+            position: absolute;
+            animation: moveAround 0.1s linear infinite;
+        }
+
+        .moving-text {
+            font-size: 2em;
+            color: white;
+            position: absolute;
+            animation: moveText 2s linear infinite;
+        }
+
+        .changing-text {
+            font-size: 100em;
+            color: white;
+            position: absolute;
+            animation: changeSize 0.1s ease-in-out infinite alternate;
+        }
+
+        @keyframes moveAround {
+            0%, 100% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            25% {
+                transform: translate(calc(50vw * var(--x)), calc(50vh * var(--y))) rotate(180deg);
+            }
+            50% {
+                transform: translate(calc(50vw * var(--x)), calc(50vh * var(--y))) rotate(360deg);
+            }
+            75% {
+                transform: translate(calc(50vw * var(--x)), calc(50vh * var(--y))) rotate(540deg);
+            }
+        }
+
+        @keyframes moveText {
+            from {
+                left: 100%;
+            }
+            to {
+                left: -100%;
+            }
+        }
+
+        @keyframes changeSize {
+            from {
+                font-size: 1em;
+            }
+            to {
+                font-size: 3em;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h2 class="logo">GameMates</h2>
-        <nav class="navigation">
-            <a class="nav-link" href="home.html">Home</a>
-            <a class="nav-link" href="#">About</a>
-            <a class="nav-link" href="#">Services</a>
-            <a class="nav-link" href="faqs.html">FAQs</a>
-            <a href="login.html">
-                <button class="btnLogin-popup">Login</button>
-            </a>
-            <a href="singup.html">
-                <button class="btnLogin-popup">Signup</button>
-            </a>
-        </nav>
-    </header>
-
-    <div class="card-section">
-        <div class="filter-input-groups">
-
-            <div class="input-group"><label class="input-label">
-                    <i class="fas fa-calendar-alt input-label-icon"></i>
-                    <span class="input-label-text">
-                        Age
-                    </span>
-                </label>
-
-                <div class="range-input">
-                    <span class="range-input-from">From</span>
-                    <input class="range-input-part" type="tel">
-                    <span class="range-input-to">to</span>
-                    <input class="range-input-part" type="tel">
-                </div>
-                <!-- <label class="input-underlabel">You can enter either one or both of the age limits.</label> -->
-            </div>
-
-            <!-- <div class="input-group">
-                <label class="input-label">
-                    <i class="fas fa-globe-europe input-label-icon"></i>
-                    <span class="input-label-text">Location</span>
-                </label>
-
-                <div class="select">
-                    <div class="selected-closed"></div>
-                </div>
-            </div> -->
-
-            <div class="input-group">
-                <label class="input-label">
-                    <i class="fas fa-comments input-label-icon"></i>
-                    <span class="input-label-text">Language</span>
-                </label>
-
-                <div class="select">
-                    <div class="selected-closed"></div>
-                </div>
-            </div>
-
-            <div class="input-group">
-                <label class="input-label">
-                    <input class="checkbox" type="checkbox" id="checkbox">
-                    <span class="input-label-text">Microphone</span>
-
-                </label>
-
-                <div class="checkbox-input">
-                    <!-- <span class="checkbox-input-label">Must have a microphone and be willing to communicate.</span> -->
-                </div>
-            </div>
-
-            <!-- <div class="input-group">
-                <label class="input-label">
-                    <i class="fas fa-clock input-label-icon"></i>
-                    <span class="input-label-text">Online on weekdays</span>
-                </label>
-
-                <div class="range-input">
-                    <span class="range-input-from">From</span>
-                    <input class="range-input-part" type="time">
-                    <span class="range-input-to">to</span>
-                    <input class="range-input-part" type="time">
-                </div>
-            </div>
-
-            <div class="input-group">
-                <label class="input-label">
-                    <i class="fas fa-clock input-label-icon"></i>
-                    <span class="input-label-text">Online on weekends</span>
-                </label>
-
-                <div class="range-input">
-                    <span class="range-input-from">From</span>
-                    <input class="range-input-part" type="time">
-                    <span class="range-input-to">to</span>
-                    <input class="range-input-part" type="time">
-                </div>
-            </div> -->
-
-            <div class="input-group">
-                <label class="input-label">
-                    <i class="fas fa-medal input-label-icon"></i>
-                    <span class="input-label-text">Rank</span>
-                </label>
-
-                <div class="select">
-                    <div class="selected-closed"></div>
-                </div>
-            </div>
-
-            <!-- <div class="input-group">
-                <label class="input-label">
-                    <i class="fas fa-bullseye input-label-icon"></i>
-                    <span class="input-label-text">Role</span>
-                </label>
-
-                <div class="select">
-                    <div class="selected-closed"></div>
-                </div>
-            </div> -->
-
-            <div class="input-group">
-                <label class="input-label">
-                    <i class="fas fa-crosshairs input-label-icon"></i>
-                    <span class="input-label-text">Game modes</span>
-                </label>
-
-                <div class="select">
-                    <div class="selected-closed"></div>
-                </div>
-            </div>
-
-            <!-- <div class="input-group">
-                <label class="input-label">
-                    <i class="fas fa-book input-label-icon"></i>
-                    <span class="input-label-text">New or returning</span>
-                </label>
-
-                <div class="checkbox-input">
-                    <input class="checkbox-new" type="checkbox" id="checkbox2">
-                    <span class="checkbox-input-label">Must be new or returning players to the game.</span>
-                </div>
-            </div> -->
-
-            <div class="filters-buttons">
-                <button class="filters-clear-button">
-                    <i class="fas fa-eraser button-icon"></i>
-                    Clear filters
-                </button>
-
-                <button class="filters-apply-button">
-                    <i class="fas fa-filter button-icon"></i>
-                    Apply filters
-                </button>
-            </div>
-
-        </div>
+    <div class="fullscreen-text" id="movingText">
+        <p>o</p>
     </div>
+    <div class="moving-text">🚅🚃🚃🚃</div>
+    <div class="changing-text">💩</div>
 
+    <script>
+        const movingText = document.getElementById('movingText');
 
+        function setRandomCoordinates() {
+            const x = Math.random() * 2 - 1; // Random number between -1 and 1
+            const y = Math.random() * 2 - 1; // Random number between -1 and 1
+            movingText.style.setProperty('--x', x);
+            movingText.style.setProperty('--y', y);
+        }
 
+        setRandomCoordinates(); // Set initial random coordinates
 
-
-
+        movingText.addEventListener('animationiteration', setRandomCoordinates); // Change coordinates on each animation iteration
+    </script>
 </body>
 
 </html>
