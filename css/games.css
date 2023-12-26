@@ -215,7 +215,7 @@ header {
 }
 
 .filters-apply-button:hover {
-  background-color: #543682;
+  background-color: #4c2588;
   color: #ccc;
 }
 
@@ -363,9 +363,9 @@ header {
   color: #ccc;
 }
 
-.btn {
-  width: 100%;
-  height: 45px;
+.copyButton {
+  width: 60px;
+  height: 25px;
   background: #9147ff;
   border: none;
   outline: none;
@@ -373,11 +373,9 @@ header {
   cursor: pointer;
   font-size: 1em;
   color: #fff;
-  font-weight: 500;
-  /* transition: .5s; */
   transition: background-color 0.3s;
 }
 
-.btn:hover {
+.copyButton:hover {
   background: #4c2588;
 }
