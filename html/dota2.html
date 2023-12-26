@@ -35,11 +35,11 @@
                 <h4 class="input-label-text">Age</h4>
               </label>
 
-              <div class="range-input">
+              <div id="ageFilter" class="range-input">
                 <span class="range-input-from">From</span>
-                <input class="range-input-part" type="tel" />
+                <input class="range-input-part ageFrom" type="tel" />
                 <span class="range-input-to">to</span>
-                <input class="range-input-part" type="tel" />
+                <input class="range-input-part ageTo" type="tel" />
               </div>
             </div>
 
@@ -48,12 +48,12 @@
                 <h4 class="input-label-text">Language</h4>
               </label>
 
-              <div class="select">
-                <select class="selected-closed">
+              <div id="languageFilter" class="select">
+                <select class="selected-closed language">
                   <option value="--">--</option>
                   <option value="kazakh">Kazakh</option>
-                  <option value="russian">Russian</option>
-                  <option value="english">English</option>
+                  <option value="Russian">Russian</option>
+                  <option value="English">English</option>
                 </select>
               </div>
             </div>
@@ -74,17 +74,17 @@
                 <h4 class="input-label-text">Rank</h4>
               </label>
 
-              <div class="select">
-                <select class="selected-closed">
+              <div id="rankFilter" class="select">
+                <select class="selected-closed rank">
                   <option value="--">--</option>
-                  <option value="herald">Herald</option>
-                  <option value="guardian">Guardian</option>
-                  <option value="crusader">Crusader</option>
-                  <option value="archon">Archon</option>
-                  <option value="legend">Legend</option>
-                  <option value="ancient">Ancient</option>
-                  <option value="divine">Divine</option>
-                  <option value="immortal">Immortal</option>
+                  <option value="Herald">Herald</option>
+                  <option value="Guardian">Guardian</option>
+                  <option value="Crusader">Crusader</option>
+                  <option value="Archon">Archon</option>
+                  <option value="Legend">Legend</option>
+                  <option value="Ancient">Ancient</option>
+                  <option value="Divine">Divine</option>
+                  <option value="Immortal">Immortal</option>
                 </select>
               </div>
             </div>
@@ -94,8 +94,8 @@
                 <h4 class="input-label-text">Game modes</h4>
               </label>
 
-              <div class="select">
-                <select class="selected-closed">
+              <div id="gameModeFilter" class="select">
+                <select class="selected-closed gamemodes">
                   <option value="--">--</option>
                   <option value="Unranked">Unranked</option>
                   <option value="Ranked">Ranked</option>
@@ -236,11 +236,18 @@
             </div>
           </div>
 
-          <div class="card-profile">
+          <div
+            class="card-profile"
+            data-age="20"
+            data-language="Russian"
+            data-microphone="true"
+            data-rank="Archon"
+            data-game-mode="Ranked"
+          >
             <div class="profile-header">
               <div>
                 <h3 class="profile-heading">
-                  <a class="" href="#" tabindex="0">StepV13579</a>
+                  <a class="" href="#" tabindex="0">DoZhD1k</a>
                 </h3>
                 <span class="profile-subheading">Updated 4 hours ago</span>
               </div>
@@ -256,7 +263,7 @@
                 <p class="detail">
                   <span class="detail-label">Discord:</span>
                   <span>
-                    <span class="copyable">Stepik13579#4094</span>
+                    <span class="copyable">dozhd1k</span>
                     <span class="copyable-copy">Copy</span>
                   </span>
                 </p>
@@ -291,21 +298,21 @@
                 <p class="detail">
                   <i class="fas fa-calendar-alt detail-icon"></i>
                   <span class="detail-labelless">Is </span>
-                  <span class="detail-emphasize">22</span>
+                  <span class="detail-emphasize">20</span>
                   years old
                 </p>
 
                 <p class="detail">
                   <i class="fas fa-globe-europe detail-icon"></i>
                   <span class="detail-labelless">Lives in </span>
-                  <span class="detail-emphasize">Europe</span>
+                  <span class="detail-emphasize">Kazakhstan</span>
                 </p>
 
                 <p class="detail">
                   <i class="fas fa-comments detail-icon"></i>
                   <span class="detail-labelless">Speaks </span>
-                  <span class="detail-emphasize">Czech</span>
-                  and
+                  <span class="detail-emphasize">Russian </span>
+                  spa and
                   <span class="detail-emphasize">English</span>
                 </p>
 
@@ -327,8 +334,7 @@
                 <p class="detail">
                   <i class="fas fa-globe-europe detail-icon"></i>
                   <span class="detail-label">Region: </span>
-                  <span class="detail-emphasize">Europe East</span>,
-                  <span class="detail-emphasize">Europe West</span>
+                  <span class="detail-emphasize">Europe</span>,
                 </p>
 
                 <p class="detail">
@@ -342,7 +348,6 @@
                 <p class="detail">
                   <i class="fas fa-crosshairs detail-icon"></i>
                   <span class="detail-label">Interest: </span>
-                  <span class="detail-emphasize">Unranked</span>,
                   <span class="detail-emphasize">Ranked</span>
                 </p>
               </div>
@@ -384,8 +389,10 @@
                 <p class="detail">
                   <span class="detail-label">Steam ID: </span>
                   <span>
-                    <span class="copyable">76561198182818837</span>
-                    <span class="copyable-copy">Copy</span>
+                    <span class="copyable" id="copyText">6757875</span>
+                    <button id="copyButton" class="btn">
+                      <span class="copyable-copy">Copy</span>
+                    </button>
                   </span>
                 </p>
 
@@ -493,5 +500,8 @@
         </div>
       </div>
     </div>
+    <script src="../js/filter.js"></script>
+    <script src="../js/copy.js"></script>
   </body>
+  autocomplete
 </html>

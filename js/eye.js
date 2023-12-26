@@ -48,8 +48,8 @@ let currentY = 0;
 // Функция для генерации случайных координат
 function setRandomCoordinates() {
   if (!isPaused) {
-    const x = Math.random() * 1 - 1;
-    const y = Math.random() * 1 - 1;
+    const x = Math.random() * 1.8 - 0.9;
+    const y = Math.random() * 1.8 - 0.9;
     movingText.style.setProperty("--x", x);
     movingText.style.setProperty("--y", y);
     currentX = x;

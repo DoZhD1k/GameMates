@@ -255,9 +255,9 @@ button {
 }
 
 .fullscreen-text {
-  font-size: 3em;
+  font-size: 2em;
   color: white;
-  /* animation: moveAround 1s linear infinite; */
+  animation: moveAround 1s linear infinite;
   position: relative;
 }
 
@@ -304,9 +304,9 @@ button {
   }
 } */
 
-#toggleBtn {
+/* #toggleBtn {
   position: fixed;
-  bottom: 20px;
+  bottom: 65px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #9147ff;
@@ -322,6 +322,29 @@ button {
 
 #toggleBtn:hover {
   opacity: 0.7;
+} */
+
+#toggleBtn {
+  position: fixed;
+  transform: translateX(-50%);
+  background: #9147ff;
+  bottom: 65px;
+  z-index: 1000;
+  left: 50%;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+  /* transition: .5s; */
+  transition: background-color 0.3s;
+  padding: 15px;
+}
+
+#toggleBtn:hover {
+  background: #4c2588;
 }
 
 /* ////////////////////////////////////           Admin panel                        ////////////////////////////////// */
