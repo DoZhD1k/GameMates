@@ -245,7 +245,7 @@ button {
   background: #4c2588;
 }
 
-/* ////////////////////////////////////               Eye tTaining                    ////////////////////////////////// */
+/* ////////////////////////////////////                 Eye tTaining                       ////////////////////////////////// */
 
 .ball {
   margin-top: 30%;
@@ -261,7 +261,7 @@ button {
   position: relative;
 }
 
-/* @keyframes moveAround {
+@keyframes moveAround {
   0%,
   100% {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -302,27 +302,7 @@ button {
     transform: translate(calc(50vw * var(--x)), calc(50vh * var(--y)))
       rotate(324deg);
   }
-} */
-
-/* #toggleBtn {
-  position: fixed;
-  bottom: 65px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #9147ff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  z-index: 1000;
-  transition: opacity 0.3s ease;
-  padding: 15px;
 }
-
-#toggleBtn:hover {
-  opacity: 0.7;
-} */
 
 #toggleBtn {
   position: fixed;
@@ -512,4 +492,55 @@ button {
 
 .admin-games-delete:hover {
   background-color: #4c2588;
+}
+
+/* ////////////////////////////////////               Profile                    ////////////////////////////////// */
+
+.main-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-username {
+  font-size: 2em;
+  margin: 0;
+}
+
+.profile-location {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.profile-details {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.profile-column {
+  flex: 1;
+}
+
+.profile-details h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.profile-detail {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.profile-bio {
+  padding: 20px;
+}
+
+.profile-bio h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
