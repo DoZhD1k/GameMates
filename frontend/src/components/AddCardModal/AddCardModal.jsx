@@ -1,72 +1,7 @@
-// import React, { useState } from "react";
-// import Modal from "react-modal";
-
-// const AddCardModal = ({ isOpen, onClose }) => {
-//   const [userData, setUserData] = useState({
-//     id: "",
-//     name: "",
-//     email: "",
-//   });
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setUserData((prevData) => ({ ...prevData, [name]: value }));
-//   };
-
-//   const handleAddCard = () => {
-
-//     onClose();
-//   };
-
-//   return (
-//     <Modal
-//       isOpen={isOpen}
-//       onRequestClose={onClose}
-//       contentLabel="Add User Card"
-//     >
-//       <h2>Add User Card</h2>
-//       <form>
-//         <label>
-//           ID:
-//           <input
-//             type="text"
-//             name="id"
-//             value={userData.id}
-//             onChange={handleChange}
-//           />
-//         </label>
-//         <label>
-//           Name:
-//           <input
-//             type="text"
-//             name="name"
-//             value={userData.name}
-//             onChange={handleChange}
-//           />
-//         </label>
-//         <label>
-//           Email:
-//           <input
-//             type="text"
-//             name="email"
-//             value={userData.email}
-//             onChange={handleChange}
-//           />
-//         </label>
-//         {/* Добавьте другие поля пользователя по аналогии */}
-//         <button type="button" onClick={handleAddCard}>
-//           Add Card
-//         </button>
-//       </form>
-//     </Modal>
-//   );
-// };
-
-// export default AddCardModal;
-
 import React, { useState } from "react";
 import Modal from "react-modal";
-// import
+import "./AddCardModal.css"
+
 
 const AddCardModal = ({ isOpen, onClose, game }) => {
   const [userData, setUserData] = useState({
@@ -87,16 +22,11 @@ const AddCardModal = ({ isOpen, onClose, game }) => {
     about: "",
   });
 
-  //   if (!game) {
-  //     return null;
-  //   }
 
-  //   const { ranks, game_mods, languages } = game;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // Если поле - массив (например, languages или game_modes), обновляем его с использованием специальной логики
     if (Array.isArray(userData[name])) {
       setUserData((prevData) => ({
         ...prevData,
@@ -108,22 +38,23 @@ const AddCardModal = ({ isOpen, onClose, game }) => {
   };
 
   const handleAddCard = () => {
-    // Обработка добавления карточки (например, отправка данных на сервер)
-    // ...
 
-    // Закрываем модальное окно после добавления
     onClose();
   };
 
   return (
+    <>
+      {isOpen && <div className="modal-overlay"></div>}
+      
     <Modal
       isOpen={isOpen}
       onRequestClose={onClose}
       contentLabel="Add User Card"
+      className="modal-content"
     >
-      <h2>Add User Card</h2>
+      <h2 className="modal-heading">Add User Card</h2>
       <form>
-        <label>
+        <label className="modal-label">
           Nickname:
           <input
             type="text"
@@ -132,7 +63,7 @@ const AddCardModal = ({ isOpen, onClose, game }) => {
             onChange={handleChange}
           />
         </label>
-        <label>
+        <label className="modal-label">
           Steam:
           <input
             type="text"
@@ -141,7 +72,7 @@ const AddCardModal = ({ isOpen, onClose, game }) => {
             onChange={handleChange}
           />
         </label>
-        <label>
+        <label className="modal-label">
           Discord:
           <input
             type="text"
@@ -150,7 +81,7 @@ const AddCardModal = ({ isOpen, onClose, game }) => {
             onChange={handleChange}
           />
         </label>
-        <label>
+        <label className="modal-label">
           Age:
           <input
             type="text"
@@ -159,7 +90,7 @@ const AddCardModal = ({ isOpen, onClose, game }) => {
             onChange={handleChange}
           />
         </label>
-        <label>
+        <label className="modal-label">
           Region:
           <input
             type="text"
@@ -168,22 +99,8 @@ const AddCardModal = ({ isOpen, onClose, game }) => {
             onChange={handleChange}
           />
         </label>
-        {/* <label>
-          Languages:
-          <select
-            name="languages"
-            value={userData.languages}
-            onChange={handleChange}
-          >
-            <option value="--">--</option>
-            {languages.map((language) => (
-              <option key={language} value={language}>
-                {language}
-              </option>
-            ))}
-          </select>
-        </label> */}
-        <label>
+
+        <label className="modal-label">
           Microphone:
           <input
             type="checkbox"
@@ -192,18 +109,8 @@ const AddCardModal = ({ isOpen, onClose, game }) => {
             onChange={handleChange}
           />
         </label>
-        {/* <label>
-          Rank:
-          <select name="ranks" value={userData.ranks} onChange={handleChange}>
-            <option value="--">--</option>
-            {ranks.map((rank) => (
-              <option key={rank} value={rank}>
-                {rank}
-              </option>
-            ))}
-          </select>
-        </label> */}
-        <label>
+
+        <label className="modal-label">
           Server:
           <input
             type="text"
@@ -212,22 +119,8 @@ const AddCardModal = ({ isOpen, onClose, game }) => {
             onChange={handleChange}
           />
         </label>
-        {/* <label>
-          Game Modes:
-          <select
-            name="game_modes"
-            value={userData.game_modes}
-            onChange={handleChange}
-          >
-            <option value="--">--</option>
-            {game_mods.map((mode) => (
-              <option key={mode} value={mode}>
-                {mode}
-              </option>
-            ))}
-          </select>
-        </label> */}
-        <label>
+
+        <label className="modal-label">
           About:
           <input
             type="text"
@@ -237,11 +130,12 @@ const AddCardModal = ({ isOpen, onClose, game }) => {
           />
         </label>
 
-        <button type="button" onClick={handleAddCard}>
+        <button className="modal-btn" type="button" onClick={handleAddCard}>
           Add Card
         </button>
       </form>
     </Modal>
+    </>
   );
 };
 

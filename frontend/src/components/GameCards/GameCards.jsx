@@ -286,7 +286,8 @@ const GameCards = () => {
               <div
                 key={index}
                 data-age={card.age}
-                data-language={card.languages}
+                data-mainLanguage={card.mainLanguage}
+                data-languages={card.languages}
                 data-microphone={card.hasMicrophone}
                 data-rank={card.rank}
                 data-game-mode={card.game_modes}
