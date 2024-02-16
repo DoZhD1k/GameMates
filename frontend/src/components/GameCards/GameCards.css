@@ -1,0 +1,166 @@
+.card-profile {
+  margin-left: 20%;
+  background-color: #26262c;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  right: 200px;
+  min-height: 522px;
+}
+
+.card {
+  margin: 0;
+  width: 450px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.card-profile {
+  background-color: #26262c;
+  border-radius: 20px;
+  color: #fff;
+  padding: 20px;
+  /* margin: 20px; */
+  width: 420px;
+  min-height: 700px;
+  margin: 0;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-heading a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #9147ff;
+  margin: 0;
+}
+
+.divider {
+  margin: 0 10px;
+  color: #ccc;
+}
+
+.profile-subheading {
+  color: #ccc;
+}
+
+.options-button-icon {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.detail-columns {
+  /* display: flex; */
+  justify-content: space-between;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.detail-column {
+  /* flex: 1; */
+  text-align: left;
+}
+
+.detail-columning {
+  flex: 1;
+  text-align: left;
+}
+
+.detail-column-heading {
+  color: #9147ff;
+  margin-bottom: 10px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.detail-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.detail-url {
+  text-decoration: none;
+  color: #9147ff;
+}
+
+.detail-url:hover {
+  text-decoration: underline;
+}
+
+.detail-labelless {
+  margin-right: 5px;
+}
+
+.detail-emphasize {
+  font-weight: bold;
+}
+
+.detail-paragraph {
+  margin: 0;
+  color: #ccc;
+}
+
+.copyButton {
+  width: 60px;
+  height: 25px;
+  background: #9147ff;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.copyButton:hover {
+  background: #4c2588;
+}
+
+footer {
+  background-color: #26262c;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.footer-section a {
+  display: block;
+  color: #fff;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 20px;
+}
