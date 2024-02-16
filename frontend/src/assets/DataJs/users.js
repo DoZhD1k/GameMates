@@ -1,0 +1,53 @@
+let users = [
+    {
+      id: 1,
+      fullName: "Arlen Chereshnikov",
+      nickname: "DoZhD1k",
+      email: "chereshnikovarlen03@gmail.com",
+      steam: "128493773",
+      discord: "dozhd1k",
+      age: "20",
+      country: "Kazakhstan",
+      languages: ["Russian"],
+      userLanguages: ["Russian", ", ", "English"],
+    },
+    {
+      id: 2,
+      fullName: "Boris Khegay",
+      nickname: "mochi",
+      email: "bk@gmail.com",
+      steam: "12408732787",
+      discord: "borchkkk",
+      age: "20",
+      country: "Kazakhstan",
+      languages: ["Russian"],
+      userLanguages: ["Russian", ", ", "English"],
+    },
+    {
+      id: 3,
+      fullName: "Alan Umirzakov",
+      nickname: "n o c t u r n e",
+      email: "umirzakovalan@gmail.com",
+      steam: "12408732787",
+      discord: "borchkkk",
+      age: "20",
+      country: "Kazakhstan",
+      languages: ["Russian"],
+      userLanguages: ["Russian", ", ", "English"],
+    },
+    {
+      id: 3,
+      fullName: "Kirill Malov",
+      nickname: "ytka45",
+      email: "kirya@gmail.com",
+      steam: "12408732787",
+      discord: "ytka",
+      age: "201",
+      country: "Kazakhstan",
+      languages: ["Russian"],
+      userLanguages: ["Russian"],
+    },
+  ];
+  
+  export default users;
+  
