@@ -9,6 +9,7 @@ import FAQs from "./pages/FAQs";
 import AboutUs from "./pages/AboutUs";
 import EyeTraining from "./pages/EyeTraining";
 import GamePage from "./pages/GamePage";
+import Chatpage from "./pages/Chatpage";
 import AdminPanel from "./pages/AdminPages/AdminPanel";
 import AdminGames from "./pages/AdminPages/AdminGames";
 import AdminUsers from "./pages/AdminPages/AdminUsers";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/chat" element={<Chatpage />} />
           <Route
             path="/AdminstratorPanelControll/DashboardHomePage"
             element={<AdminPanel />}

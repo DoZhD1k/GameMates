@@ -7,14 +7,17 @@ const Header = () => {
     <header>
       <h2 className="logo">GameMates</h2>
       <nav className="navigation">
-        <Link
+        {/* <Link
           to="/AdminstratorPanelControll/DashboardHomePage"
           className="nav-link"
         >
-          Dash Board
-        </Link>
+          DashBoard
+        </Link> */}
         <Link to="/" className="nav-link">
           Home
+        </Link>
+        <Link to="/chat" className="nav-link">
+          Chat
         </Link>
         <Link to="/eye" className="nav-link">
           Eye Training
