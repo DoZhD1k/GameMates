@@ -47,7 +47,7 @@ let cards = [
       mainLanguage: ["Russian"],
       languages: ["English", "Russian"],
       microphone: "Has a microphone",
-      hasMicrophone: "true",
+      hasMicrophone: "false",
       rank: "Herald",
       server: "Frankurt",
       game_modes: ["All Pick"],

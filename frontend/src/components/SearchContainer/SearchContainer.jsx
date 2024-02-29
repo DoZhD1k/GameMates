@@ -45,6 +45,7 @@ const SearchContainer = () => {
                 </div>
               </div>
             </Link>
+            
           ))
         )}
       </div>

@@ -40,7 +40,7 @@ function applyFilters() {
     allCards.forEach((card) => {
       console.log("Applying filters for card:");
       var cardAge = card.getAttribute("data-age");
-      var cardLanguage = card.getAttribute("data-language");
+      var cardLanguage = card.getAttribute("data-mainLanguage");
       var cardMicrophone = card.getAttribute("data-microphone") === "true";
       var cardRank = card.getAttribute("data-rank");
       var cardGameMode = card.getAttribute("data-game-mode");
