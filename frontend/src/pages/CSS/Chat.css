@@ -16,7 +16,7 @@
     color: white;
     padding-top: 20px;
 
-    max-width: 550px;
+    max-width: 560px;
 }
   
 .chat-sidebar h2 {
@@ -67,14 +67,18 @@
 }
 
 .grid-chat-container {
+    margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    padding: 20px;
+    padding: 5px;
+    height: 490px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }  
 
 .chat-users-items {
-    margin-bottom: 20px;
+    margin: 10px;
     background-color: #26262c;
     border: none;
     outline: none;
@@ -113,4 +117,33 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.list-chat-container {
+    min-width: 555px;
+    display: block;
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+    margin-top: 10px;
+}
+
+.list-chat-container-item {
+    background-color: #26262c;
+    border-radius: 8px; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    align-items: center;
+    display: flex;
+}
+
+.list-chat-container-item:hover {
+    transform: scale(1.02);
+}
+
+.chat-container-text {
+    padding-left: 20px;
+    font-size: 1.1em;
 }
