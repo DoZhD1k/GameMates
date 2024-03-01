@@ -7,6 +7,15 @@ const Chatpage = () => {
     <div className="chat-panel">
       <div className="chat-sidebar">
         <h2>Chat them</h2>
+        <div className="grid-changer">
+          <div className='grid-changer-icons'>
+            <span className='grid-changer-icon'>
+              <ion-icon name="grid"></ion-icon>
+            </span>
+            <span className='grid-changer-icon'>
+              <ion-icon name="filter"></ion-icon>
+            </span>
+          </div>
         <div className="grid-chat-container">
 
           <div className="chat-users-items">
@@ -85,6 +94,7 @@ const Chatpage = () => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>

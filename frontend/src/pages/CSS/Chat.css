@@ -39,6 +39,33 @@
     color: #9147ff;
 }
 
+.grid-changer-icons {
+    position: relative;
+    display: flex;
+    color: #000;
+    /* font-size: 1.5em; */
+    left: 400px;
+}
+
+.grid-changer-icon {
+    padding: 0px 10px 0px;
+    margin: 0 10px;
+    background-color: #26262c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 57px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.grid-changer-icon:hover {
+    background: #9147ff;
+    transform: scale(1.05);
+}
+
 .grid-chat-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -59,7 +86,7 @@
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
-
+    cursor: pointer;
     max-width: 160px;
 }
 
