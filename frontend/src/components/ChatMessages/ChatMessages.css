@@ -1,0 +1,68 @@
+.msg_card_body {
+	overflow-y: auto;
+	background-color: #26262c;
+	margin-top: 0;
+	width: 100%;
+	height: 471px;
+	/* display: flex; */
+}
+
+.img_cont_msg {
+	height: 40px;
+	width: 40px;
+}
+
+.msg_container_with_img {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 4px;
+}
+
+.msg_container_send_with_img {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 4px;
+}
+
+.msg_cotainer {
+	width: 30%;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 10px;
+	border-radius: 25px;
+	background-color: #82ccdd;
+	padding: 10px;
+	/* display: flex; */
+}
+
+.msg_cotainer_send {
+	width: 30%;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 10px;
+	border-radius: 25px;
+	background-color: #78e08f;
+	padding: 10px;
+}
+
+.msg_time {
+	/* position: absolute; */
+	left: 0;
+	bottom: -15px;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 10px;
+}
+
+.msg_time_send {
+	/* position: absolute; */
+	right: 0;
+	bottom: -15px;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 10px;
+}
+
+.user_img_msg {
+	height: 40px;
+	width: 40px;
+	border: 1.5px solid #f5f6fa;
+}

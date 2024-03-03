@@ -1,0 +1,12 @@
+.container_card {
+	height: 652px;
+	border-radius: 15px !important;
+	background-color: rgba(0, 0, 0, 0.4) !important;
+	min-width: 740px;
+}
+
+.chat {
+	margin-top: auto;
+	margin-bottom: auto;
+	max-width: 560px;
+}

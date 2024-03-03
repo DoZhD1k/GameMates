@@ -1,32 +1,16 @@
-import React from 'react'
-import chat from "../../assets/DataJs/chat"
-import isGrid from "../GridChanger/GridChanger"
+import React from 'react';
+import "./ChatContainer.css";
+import DirectChatContainer from '../DirectChatContainer/DirectChatContainer'
+import ConstactsContainer from '../ConstactsContainer/ConstactsContainer'
+
 
 const ChatContainer = () => {
   return (
-    <div className="grid-chat-container">
-    {isGrid ? (
-      chat.map((user, index) => (
-        <div className="chat-users-items" key={index}>
-          <div className="chat-users-item-div">
-            <div className="chat-users-item">
-              <img className="chat-users-img" src={user.img} alt={user.name}></img>
-            </div>
-            <div className="chat-users-item">
-              {user.name}
-            </div>
-          </div>
-        </div>
-      ))
-    ) : (
-      <ul>
-        {chat.map((user, index) => (
-          <li key={index}>{user.name}</li>
-        ))}
-      </ul>
-    )}
-  </div>
-  )
-}
+    <div className='grid_chat'>
+      <ConstactsContainer />
+      <DirectChatContainer />
+    </div>
+  );
+};
 
-export default ChatContainer
+export default ChatContainer;

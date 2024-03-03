@@ -1,0 +1,5 @@
+.grid_chat {
+    display: flex; 
+    margin: 0;
+    width:max-content;
+}

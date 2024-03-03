@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import "./CSS/other.css";
-import eyeTraining from "../assets/DataJs/functions";
+import eyeTraining from "../assets/DataJs/Eye/eye";
 
 const EyeTraining = () => {
   useEffect(() => {
-    eyeTraining(); // Вызываем функцию eyeTrainig при монтировании компонента
+    eyeTraining(); 
   }, []);
 
   return (
@@ -16,6 +16,7 @@ const EyeTraining = () => {
       </div>
       <button id="toggleBtn">Pause</button>
     </div>
+
   );
 };
 

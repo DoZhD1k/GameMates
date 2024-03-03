@@ -22,8 +22,42 @@ code {
 }
 
 body {
+  width: 100%;
   justify-content: center;
   align-items: center;
   background: #1a1a1c;
   background-position: center;
 }
+
+
+/* @media (max-width: 1200px) {
+  header {
+    padding: 20px 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    padding: 20px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 20px 20px;
+  }
+
+  .logo {
+    font-size: 1.5em;
+  }
+
+  .navigation .nav-link {
+    margin-left: 20px;
+  }
+} */

@@ -38,7 +38,7 @@ let chat = [
     },
     {
         id: 7,
-        nickname: "test",
+        nickname: "Hanato",
         logo: cs2_img,
     },
 ]

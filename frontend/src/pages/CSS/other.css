@@ -238,7 +238,6 @@
   font-size: 1em;
   color: #fff;
   font-weight: 500;
-  /* transition: .5s; */
   transition: background-color 0.3s;
   padding: 15px;
 }

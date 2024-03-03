@@ -7,12 +7,12 @@ const Header = () => {
     <header>
       <h2 className="logo">GameMates</h2>
       <nav className="navigation">
-        <Link
+        {/* <Link
           to="/AdminstratorPanelControll/DashboardHomePage"
           className="nav-link"
         >
           DashBoard
-        </Link>
+        </Link> */}
         <Link to="/" className="nav-link">
           Home
         </Link>
@@ -29,11 +29,11 @@ const Header = () => {
           FAQs
         </Link>
         <Link to="/login">
-          <button className="btnLogin-popup">Login</button>
+          <button className="btnLogin-popup">Profile</button>
         </Link>
-        <Link to="/signup">
+        {/* <Link to="/signup">
           <button className="btnLogin-popup">Signup</button>
-        </Link>
+        </Link> */}
       </nav>
     </header>
   );

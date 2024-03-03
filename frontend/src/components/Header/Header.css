@@ -11,7 +11,6 @@ header {
 .logo {
   font-size: 2em;
   color: #fff;
-  /* user-select: none; */
 }
 
 .navigation a {
@@ -70,4 +69,23 @@ header {
 .navigation .btnLogin-popup:hover {
   background: #fff;
   color: #162938;
+}
+
+
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
+
 }
