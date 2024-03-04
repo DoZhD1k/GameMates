@@ -13,6 +13,7 @@ import Chatpage from "./pages/Chatpage";
 import AdminPanel from "./pages/AdminPages/AdminPanel";
 import AdminGames from "./pages/AdminPages/AdminGames";
 import AdminUsers from "./pages/AdminPages/AdminUsers";
+import Profile from "./pages/Profile";
 // import Testing from "./components/AddCardModal/Testing";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/chat" element={<Chatpage />} />
+          <Route path="/profile" element={<Profile />} />
           <Route
             path="/AdminstratorPanelControll/DashboardHomePage"
             element={<AdminPanel />}

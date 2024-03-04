@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./CSS/SignUp.css";
+import axios from "axios"
+
 
 const SignUp = () => {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    axios.post('http://localhost:5000/register', {username, email, password})
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+  }
+
   return (
     <div className="body">
       <div className="wrapper">
@@ -11,12 +24,17 @@ const SignUp = () => {
         </Link>
         <div className="form-box register">
           <h2>Registration</h2>
-          <form action="/api/auth/register" method="post" id="registrationForm">
+          <form onSubmit={handleSubmit}>
             <div className="input-box">
               <span className="icon">
                 <ion-icon name="person"></ion-icon>
               </span>
-              <input type="text" id="username" name="username" required />
+              <input 
+              type="text" 
+              id="username" 
+              value={username}
+              onChange={(e) => setUsername(e.target.value)} 
+              required />
               <label htmlFor="username">Username</label>
             </div>
 
@@ -24,7 +42,13 @@ const SignUp = () => {
               <span className="icon">
                 <ion-icon name="mail"></ion-icon>
               </span>
-              <input type="email" id="email" name="email" required />
+              <input 
+                type="email" 
+                id="email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)} 
+                required 
+              />
               <label htmlFor="email">E-mail</label>
             </div>
 
@@ -32,7 +56,13 @@ const SignUp = () => {
               <span className="icon">
                 <ion-icon name="lock-closed"></ion-icon>
               </span>
-              <input type="password" id="password" name="password" required />
+              <input 
+                type="password" 
+                id="password" 
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required 
+               />
               <label htmlFor="password">Password</label>
             </div>
             <div className="remember-forgot">
@@ -41,7 +71,7 @@ const SignUp = () => {
                 Agree to the terms and conditions
               </label>
             </div>
-            <button type="submit" className="btn">
+            <button type="submit" className="btn" onClick={handleSubmit}>
               Signup
             </button>
             <div className="login-register">
