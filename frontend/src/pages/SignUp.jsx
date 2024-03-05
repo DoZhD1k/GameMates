@@ -5,13 +5,13 @@ import axios from "axios"
 
 
 const SignUp = () => {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [user_name, setUsername] = useState("");
+  const [user_email, setEmail] = useState("");
+  const [user_password, setPassword] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
-    axios.post('http://localhost:5000/register', {username, email, password})
+    axios.post('http://localhost:5000/register', {user_name, user_email, user_password})
     .then(res => console.log(res))
     .catch(err => console.log(err));
   }
@@ -32,7 +32,7 @@ const SignUp = () => {
               <input 
               type="text" 
               id="username" 
-              value={username}
+              value={user_name}
               onChange={(e) => setUsername(e.target.value)} 
               required />
               <label htmlFor="username">Username</label>
@@ -45,7 +45,7 @@ const SignUp = () => {
               <input 
                 type="email" 
                 id="email" 
-                value={email}
+                value={user_email}
                 onChange={(e) => setEmail(e.target.value)} 
                 required 
               />
@@ -59,7 +59,7 @@ const SignUp = () => {
               <input 
                 type="password" 
                 id="password" 
-                value={password}
+                value={user_password}
                 onChange={(e) => setPassword(e.target.value)}
                 required 
                />

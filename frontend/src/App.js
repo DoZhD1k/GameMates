@@ -14,6 +14,7 @@ import AdminPanel from "./pages/AdminPages/AdminPanel";
 import AdminGames from "./pages/AdminPages/AdminGames";
 import AdminUsers from "./pages/AdminPages/AdminUsers";
 import Profile from "./pages/Profile";
+import AdminAddUser from "./pages/AdminPages/AdminAddUser";
 // import Testing from "./components/AddCardModal/Testing";
 
 function App() {
@@ -42,7 +43,10 @@ function App() {
             path="/AdminstratorPanelControll/DashboardGames"
             element={<AdminGames />}
           />
-          {/* <Route path="/addcard" element={<Testing />} /> */}
+          <Route
+            path="/AdminstratorPanelControll/DashboardUsers/AddUser"
+            element={<AdminAddUser />}
+          />
 
           <Route path="/games/:gameId" element={<GamePage />} />
         </Routes>

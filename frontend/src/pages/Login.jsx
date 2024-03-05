@@ -4,12 +4,12 @@ import axios from "axios"
 
 const Login = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [user_email, setEmail] = useState("");
+  const [user_password, setPassword] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
-    axios.post('http://localhost:5000/login', {email, password})
+    axios.post('http://localhost:5000/login', {user_email, user_password})
       .then(res => {
         const userRole = res.data.role; // Предположим, что сервер возвращает роль пользователя в ответе
         if (userRole === "admin"){
@@ -39,7 +39,7 @@ const Login = () => {
               <input
                 type="email"
                 id="email1"
-                value={email}
+                value={user_email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
@@ -53,7 +53,7 @@ const Login = () => {
               <input
                 type="password"
                 id="password"
-                value={password}
+                value={user_password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />

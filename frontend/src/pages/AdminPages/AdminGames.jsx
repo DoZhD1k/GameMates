@@ -1,10 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../CSS/other.css";
 import { Link } from "react-router-dom";
-import { adminPanel } from "../../assets/DataJs/functions";
-import data from "../../assets/DataJs/data";
+import axios from "axios";
+
 
 const AdminGames = () => {
+  const [games, setGames] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/games')
+      .then(response => {
+        setGames(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
+
+  function deleteGame(gamesId) {
+    axios.delete(`http://localhost:5000/games/${gamesId}`)
+      .then(response => {
+        // После успешного удаления пользователя обновляем список пользователей
+        setGames(games.filter(user => user.games_id !== gamesId));
+      })
+      .catch(err => console.log(err));
+  }
+
+  function EditGame() {
+    axios.delete('http://localhost:5000/games/:user_id')
+    .then(response => {
+      setGames(response.data);
+    })
+    .catch(err => console.log(err));
+  }
+
   return (
     <div className="admin-panel">
       <div className="admin-sidebar">
@@ -44,33 +73,44 @@ const AdminGames = () => {
 
       <div className="admin-content">
         <h1 className="admin-games-heading">Games Management</h1>
-        <table className="admin-games-table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Ranks</th>
-              <th>Game Modes</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((game) => (
-              <tr key={game.id}>
-                <td>{game.id}</td>
-                <td>{game.name}</td>
-                <td>{game.ranks ? game.ranks.join(", ") : ""}</td>
-                <td>{game.game_mods ? game.game_mods.join(", ") : ""}</td>
-                <td className="admin-games-table-action">
-                  <button className="admin-games-action">Edit</button>
-                  <button onClick={adminPanel} className="admin-games-delete">
-                    Delete
-                  </button>
-                </td>
-              </tr>
+        <div className="admin-cards-serch-add-container">
+          <div className="admin-search-add-container">            
+            <Link to="/AdminstratorPanelControll/DashboardUsers/AddGame" className="admin-add-btn">
+              <ion-icon name="add"></ion-icon>
+            </Link>
+          </div>
+          <div className="admin-users-container">
+            {games.map((game, index) => (
+              <div key={index} className="admin-users-items">
+                <div className="admin-users-item-div">
+                  <div className="admin-users-id admin-users-item">
+                    ID: {game.game_id}
+                  </div>
+                  <div className="admin-users-name admin-users-item">
+                    Name: {game.game_name}
+                  </div>
+                  <div className="admin-users-age admin-users-item">
+                    Tags: {game.game_tags}
+                  </div>
+                  <div className="admin-users-nickname admin-users-item">
+                    Ranks: {game.game_ranks}
+                  </div>
+                  <div className="admin-users-email admin-users-item">
+                    Game Mods: {game.game_mods}
+                  </div>
+                  <img src={game.game_image} alt={game.game_name} className="game-image" />
+
+                  <div className="admin-users-actions">
+                    <button onClick={EditGame} className="admin-games-action">Edit</button>
+                    <button onClick={() => deleteGame(game.game_id)} className="admin-games-delete">
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
             ))}
-          </tbody>
-        </table>
+          </div>
+        </div>
       </div>
     </div>
   );

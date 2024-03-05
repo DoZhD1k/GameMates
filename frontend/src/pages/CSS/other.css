@@ -259,13 +259,19 @@
   display: flex;
 }
 
+.admin-users-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
 .admin-users-items {
   margin-bottom: 20px;
   background-color: #26262c;
   border: none;
   outline: none;
   border-radius: 20px;
-  width: 450px;
+  max-width: 400px;
   min-height: 250px;
   height: auto;
   border-radius: 20px;
@@ -430,6 +436,29 @@
 
 .admin-games-delete:hover {
   background-color: #4c2588;
+}
+
+.admin-search-add-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.admin-add-btn {
+  padding: 0px 10px 0px;
+  /* margin: 0 10px; */
+  background-color: #26262c;
+  position: relative;
+  color: #fff;
+  font-size: 1.5em;
+  line-height: 57px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.admin-add-btn:hover {
+  background: #9147ff;
+  transform: scale(1.05);
 }
 
 /* ////////////////////////////////////               Profile                    ////////////////////////////////// */
