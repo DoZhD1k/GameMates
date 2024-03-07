@@ -2,7 +2,9 @@
 	height: 652px;
 	border-radius: 15px !important;
 	background-color: rgba(0, 0, 0, 0.4) !important;
-	min-width: 740px;
+	min-width: 925px;
+	max-width: 825px;
+
 }
 
 .chat {

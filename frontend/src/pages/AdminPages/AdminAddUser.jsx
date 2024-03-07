@@ -19,7 +19,7 @@ const AdminAddUser = () => {
     return (
         <div className="body">
         <div className="wrapper">
-          <Link to="/" className="icone-close">
+          <Link to="/AdminstratorPanelControll/DashboardUsers" className="icone-close">
             <ion-icon name="close"></ion-icon>
           </Link>
           <div className="form-box register">
@@ -76,23 +76,9 @@ const AdminAddUser = () => {
                  />
                 <label htmlFor="password">Password</label>
               </div>
-              <div className="remember-forgot">
-                <label htmlFor="checkbox">
-                  <input type="checkbox" id="checkbox" name="checkbox" required />
-                  Agree to the terms and conditions
-                </label>
-              </div>
               <button type="submit" className="btn" onClick={AddUserSubmit}>
-                Signup
+                Add User
               </button>
-              <div className="login-register">
-                <p className="have-account">
-                  Already have an account?
-                  <Link to="/login" className="signup-link">
-                    Login
-                  </Link>
-                </p>
-              </div>
             </form>
           </div>
         </div>

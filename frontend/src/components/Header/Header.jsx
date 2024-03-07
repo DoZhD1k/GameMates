@@ -34,7 +34,7 @@ const Header = ({ isLoggedIn }) => {
           </Link>
         ) : (
           <Link to="/login">
-            <button className="btnLogin-popup">Log in</button>
+            <button className="btnLogin-popup">Profile</button>
           </Link>
         )}
       </nav>

@@ -82,16 +82,8 @@ const AdminAddGame = () => {
                     </label>
                 </div>
                 <button type="submit" className="btn" onClick={AddGameSubmit}>
-                    Signup
+                    Add Game
                 </button>
-                <div className="login-register">
-                    <p className="have-account">
-                    Already have an account?
-                    <Link to="/login" className="signup-link">
-                        Login
-                    </Link>
-                    </p>
-                </div>
                 </form>
             </div>
             </div>
