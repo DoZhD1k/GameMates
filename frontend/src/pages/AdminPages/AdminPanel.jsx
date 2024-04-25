@@ -33,6 +33,14 @@ const AdminPanel = () => {
             </Link>
           </li>
           <li>
+            <Link
+              to="/AdminstratorPanelControll/ToDoPage"
+              className="admin-link"
+            >
+              ToDo Page
+            </Link>
+          </li>
+          <li>
             <Link to="/" className="admin-link">
               Logout
             </Link>

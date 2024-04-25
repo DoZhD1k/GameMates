@@ -11,6 +11,12 @@ let chatMessages = [
     {
         messageSendText: "Bye",
     },
+    {
+        messageText: "I am good, bye",
+    },
+    {
+        messageSendText: "Bye",
+    },
   ];
   
   export default chatMessages;

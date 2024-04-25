@@ -3,35 +3,37 @@ import "../CSS/other.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-
 const AdminGames = () => {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/games')
-      .then(response => {
+    axios
+      .get("http://localhost:5000/games")
+      .then((response) => {
         setGames(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
   }, []);
 
   function deleteGame(gamesId) {
-    axios.delete(`http://localhost:5000/games/${gamesId}`)
-      .then(response => {
+    axios
+      .delete(`http://localhost:5000/games/${gamesId}`)
+      .then((response) => {
         // После успешного удаления пользователя обновляем список пользователей
-        setGames(games.filter(user => user.games_id !== gamesId));
+        setGames(games.filter((user) => user.games_id !== gamesId));
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   }
 
   function EditGame() {
-    axios.delete('http://localhost:5000/games/:user_id')
-    .then(response => {
-      setGames(response.data);
-    })
-    .catch(err => console.log(err));
+    axios
+      .delete("http://localhost:5000/games/:user_id")
+      .then((response) => {
+        setGames(response.data);
+      })
+      .catch((err) => console.log(err));
   }
 
   return (
@@ -64,6 +66,14 @@ const AdminGames = () => {
             </Link>
           </li>
           <li>
+            <Link
+              to="/AdminstratorPanelControll/ToDoPage"
+              className="admin-link"
+            >
+              ToDo Page
+            </Link>
+          </li>
+          <li>
             <Link to="/" className="admin-link">
               Logout
             </Link>
@@ -74,8 +84,11 @@ const AdminGames = () => {
       <div className="admin-content">
         <h1 className="admin-games-heading">Games Management</h1>
         <div className="admin-cards-serch-add-container">
-          <div className="admin-search-add-container">            
-            <Link to="/AdminstratorPanelControll/DashboardUsers/AddGame" className="admin-add-btn">
+          <div className="admin-search-add-container">
+            <Link
+              to="/AdminstratorPanelControll/DashboardUsers/AddGame"
+              className="admin-add-btn"
+            >
               <ion-icon name="add"></ion-icon>
             </Link>
           </div>
@@ -98,11 +111,20 @@ const AdminGames = () => {
                   <div className="admin-users-email admin-users-item">
                     Game Mods: {game.game_mods}
                   </div>
-                  <img src={game.game_image} alt={game.game_name} className="game-image" />
+                  <img
+                    src={game.game_image}
+                    alt={game.game_name}
+                    className="game-image"
+                  />
 
                   <div className="admin-users-actions">
-                    <button onClick={EditGame} className="admin-games-action">Edit</button>
-                    <button onClick={() => deleteGame(game.game_id)} className="admin-games-delete">
+                    <button onClick={EditGame} className="admin-games-action">
+                      Edit
+                    </button>
+                    <button
+                      onClick={() => deleteGame(game.game_id)}
+                      className="admin-games-delete"
+                    >
                       Delete
                     </button>
                   </div>

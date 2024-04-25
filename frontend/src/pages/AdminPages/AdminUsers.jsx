@@ -7,30 +7,33 @@ const AdminUsers = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/users')
-      .then(response => {
+    axios
+      .get("http://localhost:5000/users")
+      .then((response) => {
         setUsers(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
   }, []);
 
   function deleteUser(userId) {
-    axios.delete(`http://localhost:5000/users/${userId}`)
-      .then(response => {
+    axios
+      .delete(`http://localhost:5000/users/${userId}`)
+      .then((response) => {
         // После успешного удаления пользователя обновляем список пользователей
-        setUsers(users.filter(user => user.user_id !== userId));
+        setUsers(users.filter((user) => user.user_id !== userId));
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   }
 
   function EditUser() {
-    axios.delete('http://localhost:5000/users/:user_id')
-    .then(response => {
-      setUsers(response.data);
-    })
-    .catch(err => console.log(err));
+    axios
+      .delete("http://localhost:5000/users/:user_id")
+      .then((response) => {
+        setUsers(response.data);
+      })
+      .catch((err) => console.log(err));
   }
 
   return (
@@ -63,6 +66,14 @@ const AdminUsers = () => {
             </Link>
           </li>
           <li>
+            <Link
+              to="/AdminstratorPanelControll/ToDoPage"
+              className="admin-link"
+            >
+              ToDo Page
+            </Link>
+          </li>
+          <li>
             <Link to="/" className="admin-link">
               Logout
             </Link>
@@ -73,15 +84,17 @@ const AdminUsers = () => {
       <div className="admin-content">
         <h1 className="admin-users-heading">Users Management</h1>
         <div className="admin-cards-serch-add-container">
-          
           <div className="admin-search-add-container">
             {/* <input
               className="admin-search-input"
               type="text"
               placeholder="Search by name..."
             /> */}
-            
-            <Link to="/AdminstratorPanelControll/DashboardUsers/AddUser" className="admin-add-btn">
+
+            <Link
+              to="/AdminstratorPanelControll/DashboardUsers/AddUser"
+              className="admin-add-btn"
+            >
               <ion-icon name="add"></ion-icon>
             </Link>
           </div>
@@ -113,8 +126,13 @@ const AdminUsers = () => {
                   </div>
 
                   <div className="admin-users-actions">
-                    <button onClick={EditUser} className="admin-games-action">Edit</button>
-                    <button onClick={() => deleteUser(user.user_id)} className="admin-games-delete">
+                    <button onClick={EditUser} className="admin-games-action">
+                      Edit
+                    </button>
+                    <button
+                      onClick={() => deleteUser(user.user_id)}
+                      className="admin-games-delete"
+                    >
                       Delete
                     </button>
                   </div>

@@ -15,7 +15,7 @@ import AdminGames from "./pages/AdminPages/AdminGames";
 import AdminUsers from "./pages/AdminPages/AdminUsers";
 import Profile from "./pages/Profile";
 import AdminAddUser from "./pages/AdminPages/AdminAddUser";
-// import Testing from "./components/AddCardModal/Testing";
+import ToDoPage from "./pages/AdminPages/ToDoPage.tsx";
 
 function App() {
   return (
@@ -46,6 +46,10 @@ function App() {
           <Route
             path="/AdminstratorPanelControll/DashboardUsers/AddUser"
             element={<AdminAddUser />}
+          />
+          <Route
+            path="/AdminstratorPanelControll/ToDoPage"
+            element={<ToDoPage />}
           />
 
           <Route path="/games/:gameId" element={<GamePage />} />

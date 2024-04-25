@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Header = ({ isLoggedIn }) => {
   return (
     <header>
-      <h2 className="logo">GameMates</h2>
+      <h2 className="logo">GamerLink</h2>
       <nav className="navigation">
         <Link
           to="/AdminstratorPanelControll/DashboardHomePage"
