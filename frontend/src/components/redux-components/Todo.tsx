@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import FilterButtons from "./FilterButtons.tsx";
 import { addTodo, updateSearchTerm } from "../redux/actions.ts";
-import { TodoProps, TodoState } from "../redux/types";
+import { TodoProps, TodoComponentState } from "../redux/types.ts";
+import { AppDispatch } from "../redux/store.ts";
 
-class Todo extends Component<TodoProps, TodoState> {
+class Todo extends Component<TodoProps, TodoComponentState> {
   constructor(props: TodoProps) {
     super(props);
     this.state = {
@@ -71,11 +72,9 @@ class Todo extends Component<TodoProps, TodoState> {
   }
 }
 
-const mapDispatchToProps = (dispatch: any) => {
-  return {
-    addTodo: (text: string) => dispatch(addTodo(text)),
-    updateSearchTerm: (term: string) => dispatch(updateSearchTerm(term)),
-  };
-};
+const mapDispatchToProps = (dispatch: AppDispatch) => ({
+  addTodo: (text: string) => dispatch(addTodo(text)),
+  updateSearchTerm: (term: string) => dispatch(updateSearchTerm(term)),
+});
 
 export default connect(null, mapDispatchToProps)(Todo);

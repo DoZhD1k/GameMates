@@ -1,9 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { TodoState, Todo } from "../redux/types";
+import { TodoState, TodoType } from "../redux/types";
 
 interface TodoListProps {
-  todos: Todo[];
+  todos: TodoType[];
 }
 
 const TodoList: React.FC<TodoListProps> = ({ todos }) => {

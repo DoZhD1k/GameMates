@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { filterTodos } from "../redux/actions.ts";
-import { TodoState } from "../redux/types";
+import { TodoState } from "../redux/types.ts";
 
 const FilterButtons = () => {
   const dispatch = useDispatch();

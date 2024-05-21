@@ -1,6 +1,5 @@
 import { TodoActionTypes } from "./actionTypes.ts";
 
-// Интерфейсы для действий
 interface AddTodoAction {
   type: TodoActionTypes.ADD_TODO;
   payload: { text: string };
@@ -26,14 +25,6 @@ interface UpdateSearchTermAction {
   payload: { searchTerm: string };
 }
 
-// Определение типа массива объектов
-export interface Todo {
-  id: number;
-  text: string;
-  completed: boolean;
-}
-
-// Объединение всех действий
 export type TodoActions =
   | AddTodoAction
   | ToggleTodoAction
@@ -41,7 +32,6 @@ export type TodoActions =
   | FilterTodosAction
   | UpdateSearchTermAction;
 
-// Экшн-криэйторы
 export const addTodo = (text: string): AddTodoAction => ({
   type: TodoActionTypes.ADD_TODO,
   payload: { text },

@@ -1,19 +1,20 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import React from "react";
 import "./GameFilters.css";
 import { clearFilters, applyFilters } from "../../assets/DataJs/functions";
-import AddCardModal from "../AddCardModal/AddCardModal";
+// import AddCardModal from "../AddCardModal/AddCardModal";
 import { GameFiltersProps } from "./types";
 
 const GameFilters: React.FC<GameFiltersProps> = ({ game, setFilters }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
+  // const openModal = () => {
+  //   setIsModalOpen(true);
+  // };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  // const closeModal = () => {
+  //   setIsModalOpen(false);
+  // };
 
   if (!game) {
     return null;
@@ -97,10 +98,10 @@ const GameFilters: React.FC<GameFiltersProps> = ({ game, setFilters }) => {
           <button className="filters-apply-button" onClick={applyFilters}>
             Apply filters
           </button>
-          <button className="filters-card-button" onClick={openModal}>
+          {/* <button className="filters-card-button" onClick={openModal}>
             Add Card
           </button>
-          <AddCardModal isOpen={isModalOpen} onClose={closeModal} />
+          <AddCardModal isOpen={isModalOpen} onClose={closeModal} /> */}
         </div>
       </div>
     </div>

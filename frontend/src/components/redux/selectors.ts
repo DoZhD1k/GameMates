@@ -1,4 +1,3 @@
-// selectors.ts
 import { TodoState } from "./types";
 
 export const getTodos = (state: TodoState) => state.todos;

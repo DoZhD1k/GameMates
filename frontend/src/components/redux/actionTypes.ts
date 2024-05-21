@@ -1,4 +1,3 @@
-// actionTypes.ts
 export enum TodoActionTypes {
   ADD_TODO = "ADD_TODO",
   TOGGLE_TODO = "TOGGLE_TODO",
