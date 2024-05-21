@@ -1,38 +1,36 @@
-function eyeTraining() {
-    const movingText = document.getElementById("movingText");
-    const toggleBtn = document.getElementById("toggleBtn");
-  
-    let isPaused = false;
-    let currentX = 0;
-    let currentY = 0;
-  
-    function setRandomCoordinates() {
-      if (!isPaused) {
-        const x = Math.random() * 1 - 0.5;
-        const y = Math.random() * 1 - 0.5;
-        movingText.style.setProperty("--x", x);
-        movingText.style.setProperty("--y", y);
-        currentX = x;
-        currentY = y;
-      }
-    }
-  
+function eyeTraining(movingTextElement, toggleBtnElement) {
+  let isPaused = false;
+  let currentX = 0;
+  let currentY = 0;
 
-  
-    setRandomCoordinates();  
-    movingText.addEventListener("animationiteration", setRandomCoordinates);
-  
-    toggleBtn.addEventListener("click", function () {
-      if (isPaused) {
-        movingText.style.animationPlayState = "running";
-        isPaused = false;
-        movingText.style.setProperty("--x", currentX);
-        movingText.style.setProperty("--y", currentY);
-      } else {
-        movingText.style.animationPlayState = "paused";
-        isPaused = true;
-      }
-    });
+  function setRandomCoordinates() {
+    if (!isPaused) {
+      const x = Math.random() * 1 - 0.5;
+      const y = Math.random() * 1 - 0.5;
+      movingTextElement.style.setProperty("--x", x.toString());
+      movingTextElement.style.setProperty("--y", y.toString());
+      currentX = x;
+      currentY = y;
+    }
+  }
+
+  setRandomCoordinates();
+  movingTextElement.addEventListener(
+    "animationiteration",
+    setRandomCoordinates
+  );
+
+  toggleBtnElement.addEventListener("click", function () {
+    if (isPaused) {
+      movingTextElement.style.animationPlayState = "running";
+      isPaused = false;
+      movingTextElement.style.setProperty("--x", currentX.toString());
+      movingTextElement.style.setProperty("--y", currentY.toString());
+    } else {
+      movingTextElement.style.animationPlayState = "paused";
+      isPaused = true;
+    }
+  });
 }
 
 export default eyeTraining;
